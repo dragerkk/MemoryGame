@@ -181,7 +181,6 @@
 				3DC8424C2874812E0010FA14 /* Sources */,
 				3DC8424D2874812E0010FA14 /* Frameworks */,
 				3DC8424E2874812E0010FA14 /* Resources */,
-				94C904777482F3A72D597CE0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,23 +242,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		94C904777482F3A72D597CE0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-6_MemoryGame/Pods-6_MemoryGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-6_MemoryGame/Pods-6_MemoryGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-6_MemoryGame/Pods-6_MemoryGame-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CA667422AADDEA18504EEA6A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
