@@ -6,10 +6,6 @@
 //
 
 import UIKit
-import KakaoSDKCommon
-import KakaoSDKAuth
-import KakaoSDKUser
-import NaverThirdPartyLogin
 import Alamofire
 
 class MainViewController: UIViewController {
