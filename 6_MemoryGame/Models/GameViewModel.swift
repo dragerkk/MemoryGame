@@ -14,10 +14,10 @@ extension GameViewController {
 		timeLimit -= 1
 		
 		timerLabel.text = "Time limit: \(timeLimit)"
+		
 		if timeLimit == 0 {
 			timerLabel.text = "Time up."
 			timer?.invalidate()
-			
 			//check if user win the game. -- collectionview delegate
 			checkForGameEnd()
 		}

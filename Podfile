@@ -6,4 +6,5 @@ target '6_MemoryGame' do
   use_frameworks!
 
   # Pods for 6_MemoryGame
+pod 'Alamofire'
 end

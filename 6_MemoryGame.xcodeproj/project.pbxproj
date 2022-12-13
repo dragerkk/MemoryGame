@@ -72,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				3DA4987C288461D800726AC3 /* GameViewModel.swift */,
+				3DCF3B0F2878C28300D247F9 /* SoundManager.swift */,
+				3D46768D287BF6B30087DAF2 /* Rank.swift */,
 				3DAE89CD28795B7200A5B1A9 /* Card */,
 			);
 			path = Models;
@@ -113,8 +115,6 @@
 				3DC842592874812E0010FA14 /* Main.storyboard */,
 				3DCED2452882C748007F73A5 /* ViewControllers */,
 				3DA4987E288461E500726AC3 /* Models */,
-				3D46768D287BF6B30087DAF2 /* Rank.swift */,
-				3DCF3B0F2878C28300D247F9 /* SoundManager.swift */,
 				3DCF3B0D2878C20200D247F9 /* SoundFile */,
 				3DC8425C287481320010FA14 /* Assets.xcassets */,
 				3DC8425E287481320010FA14 /* LaunchScreen.storyboard */,
@@ -181,6 +181,7 @@
 				3DC8424C2874812E0010FA14 /* Sources */,
 				3DC8424D2874812E0010FA14 /* Frameworks */,
 				3DC8424E2874812E0010FA14 /* Resources */,
+				84E8FD7DD387D607D2F25AF4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,6 +243,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		84E8FD7DD387D607D2F25AF4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-6_MemoryGame/Pods-6_MemoryGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-6_MemoryGame/Pods-6_MemoryGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-6_MemoryGame/Pods-6_MemoryGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CA667422AADDEA18504EEA6A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
