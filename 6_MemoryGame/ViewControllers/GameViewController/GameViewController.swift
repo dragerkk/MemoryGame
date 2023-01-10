@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
 	@IBOutlet weak var scoreLabel: UILabel!
 	@IBOutlet weak var bgmButton: UIButton!
 	
-	let model = CardModel()
+	let cardModel = CardModel()
 	var cards: [Card] = []
 	
 	var timer: Timer?
@@ -32,22 +32,41 @@ class GameViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		print("viewDidLoad")
 		
-		cards = model.getCards()
+		cards = cardModel.getCards()
 		bgmButton.setImage(UIImage(systemName: "speaker.fill"), for: .normal)
 		
 		collectionView.delegate = self
 		collectionView.dataSource = self
 		
-		//timer
-		timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerStart), userInfo: nil, repeats: true)
-		RunLoop.main.add(timer!, forMode: .common)
+		//Timer 관련
+		
+		//수정 전
+//		timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerStart), userInfo: nil, repeats: true)
+//		RunLoop.main.add(timer!, forMode: .common)
+		// 수정 후
+//		timerLabel.text = "Remember!"
+//		DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//			self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerStart), userInfo: nil, repeats: true)
+//			RunLoop.main.add(self.timer!, forMode: .common)
+//		}
+		setupTimer()
 		
 		//score
 		getScore(score)
 		getRank()
 		
 		cellLayout()
+	}
+	
+	// MARK: - Setup Timer
+	func setupTimer() {
+		timerLabel.text = "Remember!"
+		DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+			self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerStart), userInfo: nil, repeats: true)
+			RunLoop.main.add(self.timer!, forMode: .common)
+		}
 	}
 	
 	@IBAction func bgmButtonAction(_ sender: Any) {
@@ -77,19 +96,21 @@ class GameViewController: UIViewController {
 	@IBAction func restartButtonTapped(_ sender: UIButton) {
 		
 		timer?.invalidate()
-		timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerStart), userInfo: nil, repeats: true)
-		RunLoop.main.add(timer!, forMode: .common)
+	
+		setupTimer()
+		
+		//수정전
+//		timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerStart), userInfo: nil, repeats: true)
+//		RunLoop.main.add(timer!, forMode: .common)
 		soundPlayer.stopBGM()
 		soundPlayer.playSound(soundName: .bgm)
 		
 		timeLimit = 30
 		score = 0
-		cards = model.getCards()
+		cards = cardModel.getCards()
 		cellLayout()
 		getScore(score)
-//		print("restart")
 		
 		collectionView.reloadData()
-		
 	}
 }

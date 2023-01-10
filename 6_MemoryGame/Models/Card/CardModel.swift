@@ -34,6 +34,7 @@ class CardModel {
 			generatedCards += [firstCard, secondCard]
 			
 		}
+		
 //		print(selectedCards)
 //		for i in generatedCards {
 //			print(i.imageName)

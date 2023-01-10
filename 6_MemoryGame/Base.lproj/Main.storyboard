@@ -12,7 +12,6 @@
         <!--Main View Controller-->
         <scene sceneID="Sl0-ky-iLF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FRq-tO-gLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Too-OK-Tc3" customClass="MainViewController" customModule="__MemoryGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SX8-FG-L4X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -74,6 +73,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7tc-Jd-1ay"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FRq-tO-gLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="228.98550724637684" y="116.51785714285714"/>
         </scene>

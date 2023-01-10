@@ -55,6 +55,7 @@ extension GameViewController: UICollectionViewDataSource {
 		}
 		
 		let card = cards[indexPath.row]
+		
 		cell.setupCell(card: card)
 		
 		return cell
